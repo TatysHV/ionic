@@ -6,4 +6,135 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+<!-- Inputs with labels -->
+INPUTS
+
+<!-- Default Input -->
+<ion-input></ion-input>
+
+<ion-item>
+    <ion-label placeholder="Enter Input">Default Label</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Floating Label</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="fixed">Fixed Label</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">Stacked Label</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <br>
+  RADIO 
+
+  <ion-list>
+      <ion-radio-group>
+        <ion-list-header>
+          <ion-label>Name</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Biff</ion-label>
+          <ion-radio slot="start" value="biff" checked></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Griff</ion-label>
+          <ion-radio slot="start" value="griff"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Buford</ion-label>
+          <ion-radio slot="start" value="buford"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <br>
+    TOGGLE
+
+    <!-- Default Toggle -->
+<ion-toggle></ion-toggle>
+
+<!-- Disabled Toggle -->
+<ion-toggle disabled></ion-toggle>
+
+<!-- Checked Toggle -->
+<ion-toggle checked></ion-toggle>
+
+<!-- Toggle Colors -->
+<ion-toggle color="primary"></ion-toggle>
+<ion-toggle color="secondary"></ion-toggle>
+<ion-toggle color="danger"></ion-toggle>
+<ion-toggle color="light"></ion-toggle>
+<ion-toggle color="dark"></ion-toggle>
+
+<!-- Toggles in a List -->
+<ion-list>
+  <ion-item>
+    <ion-label>Pepperoni</ion-label>
+    <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Sausage</ion-label>
+    <ion-toggle [(ngModel)]="sausage" disabled="true"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Mushrooms</ion-label>
+    <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
+  </ion-item>
+</ion-list>
+<br>
+CHECKBOX
+<br>
+<!-- Default Checkbox -->
+<ion-checkbox></ion-checkbox>
+
+<!-- Disabled Checkbox -->
+<ion-checkbox disabled="true"></ion-checkbox>
+
+<!-- Checked Checkbox -->
+<ion-checkbox checked="true"></ion-checkbox>
+
+<!-- Checkbox Colors -->
+<ion-checkbox color="primary"></ion-checkbox>
+<ion-checkbox color="secondary"></ion-checkbox>
+<ion-checkbox color="danger"></ion-checkbox>
+<ion-checkbox color="light"></ion-checkbox>
+<ion-checkbox color="dark"></ion-checkbox>
+
+<!-- Checkboxes in a List -->
+<ion-list>
+  <ion-item *ngFor="let entry of form">
+    <ion-label>{{entry.val}}</ion-label>
+    <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+  </ion-item>
+</ion-list>
+<br>
+
+DATATIME
+<br>
+<ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+</ion-item>
+
+<ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime display-format="MM/YYYY" picker-format="MMMM YYYY"></ion-datetime>
+</ion-item>
+
+
+
+</ion-content>
